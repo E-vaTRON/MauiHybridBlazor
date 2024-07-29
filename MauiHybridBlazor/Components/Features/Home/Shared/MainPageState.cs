@@ -15,7 +15,7 @@ public class MainPageState : INotifyPropertyChanged
     #region [ Ctor ]
     public MainPageState()
     {
-        
+
     }
     #endregion
 

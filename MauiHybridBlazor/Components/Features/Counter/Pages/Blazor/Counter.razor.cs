@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.WebView.Maui;
 using System.ComponentModel;
 
 namespace MauiHybridBlazor;

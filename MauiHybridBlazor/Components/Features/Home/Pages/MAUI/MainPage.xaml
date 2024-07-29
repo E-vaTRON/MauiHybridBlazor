@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiHybridBlazor.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiHybridBlazor"
+    x:DataType="local:MainPageViewModel"
+    BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <Grid RowDefinitions="*, *">
+        <BlazorWebView
+            x:Name="blazorWebView"
+            Grid.Row="0"
+            HostPage="wwwroot/index.html">
+            <BlazorWebView.RootComponents>
+                <RootComponent ComponentType="{x:Type local:Components.Routes}" Selector="#app" />
+            </BlazorWebView.RootComponents>
+        </BlazorWebView>
+        <VerticalStackLayout
+            Grid.Row="1"
+            Margin="0,5,0,5"
+            Padding="15"
+            BackgroundColor="White"
+            Spacing="10">
+            <Label
+                FontAttributes="Bold"
+                FontSize="16"
+                HorizontalOptions="Center"
+                Text="MAUI Shared State Demo" />
+            <Label
+                FontAttributes="Bold"
+                FontSize="20"
+                Text="Counter" />
+            <Label FontSize="16">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Total Counter: " />
+                        <Span Text="{x:Binding Counter}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Button
+                HorizontalOptions="Start"
+                Pressed="Button_Pressed"
+                Text="Click me" />
+            <Button
+                HorizontalOptions="Start"
+                Pressed="OnMyMauiButtonClicked"
+                Text="Click me" />
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
