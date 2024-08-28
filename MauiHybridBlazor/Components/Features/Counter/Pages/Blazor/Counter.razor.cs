@@ -10,9 +10,6 @@ public partial class Counter : ComponentBase
     public Counter() { }
     #endregion
 
-    #region [ Properties - Prototype ]
-    #endregion
-
     #region [ Properties - States ]
     [Inject]
     protected MainPageViewModel ViewModel { get; private set; }
