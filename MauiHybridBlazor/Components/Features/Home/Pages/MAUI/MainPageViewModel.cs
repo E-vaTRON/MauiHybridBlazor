@@ -18,6 +18,9 @@ public partial class MainPageViewModel : ObservableRecipient
     #region [ Properties ]
     [ObservableProperty]
     public int counter;
+
+    [ObservableProperty]
+    public string name;
     #endregion
 
     #region [ RelayCommand ]

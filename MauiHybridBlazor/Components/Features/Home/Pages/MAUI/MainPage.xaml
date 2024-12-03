@@ -41,6 +41,9 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
+            <Entry Text="{x:Binding Counter}"/>
+            <Label Text="Name"/>
+            <Entry Text="{x:Binding Name}"/>
             <Button
                 HorizontalOptions="Start"
                 Pressed="Button_Pressed"
